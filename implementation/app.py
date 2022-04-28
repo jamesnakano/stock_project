@@ -19,7 +19,7 @@ app = Flask(__name__)
 # Landing Page
 @app.route("/")
 def index():
-    return render_template("stock_project.html")
+    return render_template("index.html")
 
 # Prediction Form Page
 @app.route("/<FORM_PAGE_PATH>", methods=["GET"])
