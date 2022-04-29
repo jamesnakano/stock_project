@@ -26,18 +26,16 @@ def index():
 def predict_page():
     return render_template("predict.html")
 
-# About Page
-@app.route("/about", methods=["POST"])
-def about_page():
-    return render_template("about.html")
-
     # Prep form data for model
 
     # Generate, transform, and format predictions
 
     # Render prediction
-    return render_template(
-        "<PREDICTION_RESULTS_HTML_TEMPLATE>",
-        # Make dynamic values available for rendering with template
-        # key=value,
+    return render_template("predict.html",
+        date1=, price1=,date2=,price2=,date3=,price3=
+
+# About Page
+@app.route("/about")
+def about_page():
+    return render_template("about.html")
     )
