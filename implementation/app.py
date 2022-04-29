@@ -21,15 +21,15 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-# Prediction Form Page
-@app.route("/<FORM_PAGE_PATH>", methods=["GET"])
-def prediction_form():
-    return render_template("<PREDICTION_FORM_HTML_TEMPLATE>")
+# Predict Page
+@app.route("/predict", methods=["GET"])
+def predict_page():
+    return render_template("predict.html")
 
-# Prediction Results Page
-@app.route("/<PREDICTION_RESULTS_PATH>", methods=["POST"])
-def prediction_results():
-    raw_form_data = request.form
+# About Page
+@app.route("/about", methods=["POST"])
+def about_page():
+    return render_template("about.html")
 
     # Prep form data for model
 
