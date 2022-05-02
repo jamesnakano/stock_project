@@ -15,22 +15,23 @@
     <body>
         <header>
             <nav>
-                <a href="/">INSERT APP BRAND NAME HERE</a>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/<FORM_PAGE_PATH>">Predict</a></li>
-                </ul>
+                <a href="/index.html">Home</a><a href="/predict.html">Predict</a><a href="/about.html">About</a>
             </nav>
         </header>
         <main>
             <header>
-                <h1>INSERT PAGE HEADING HERE</h1>
+                Hit this button to get my model's prediction for tomorrow's high stock price!
+                If you were here the day before, hit the lower button!
             </header>
             <section>
-                INSERT APP CALL-TO-ACTION HERE
+                <form action="/predict.html">
+                    <input type="submit" value="Go to Predict" />
+                </form>
             </section>
             <section>
-                INSERT PREDICTIVE MODEL MODIVATION, DETAILS, ETC. HERE
+                <form action="/review.html">
+                    <input type="submit" value="Go to Review" />
+                </form>
             </section>
         </main>
     </body>
