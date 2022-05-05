@@ -10,9 +10,12 @@ from flask import Flask, render_template, request
 APP_DIR = path.dirname(path.abspath(__file__))
 
 # repeat for each pickle file
-with open(f"{APP_DIR}/model/<FILENAME>", "r") as file:
-    variable_name = pickle.load(file)
-
+with open(f"stock_project/implementation/model/stock_ssx.pickle", "r") as file:
+    ssx = pickle.load(file)
+with open(f"stock_project/implementation/model/stock_ssy.pickle", "r") as file:
+    ssy = pickle.load(file)
+with open(f"stock_project/implementation/model/stock_model.pickle", "r") as file:
+    model = pickle.load(file)
 # Define Flask app
 app = Flask(__name__)
 
