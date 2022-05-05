@@ -1,3 +1,16 @@
+import pandas as pd
+import yfinance as yf
+import numpy as np
+from sklearn.metrics import mean_squared_error
+from sklearn.preprocessing import StandardScaler
+import warnings
+warnings.filterwarnings("ignore")
+import matplotlib.pyplot as plt
+from keras.models import Sequential
+from keras.layers import Dense
+import tensorflow as tf
+import pickle
+
 def get_data(tick):
   t = yf.Ticker(tick)
   data = t.history(period='730d', interval='1h')
