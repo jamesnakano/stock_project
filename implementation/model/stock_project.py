@@ -27,6 +27,12 @@ def use_data(open, close, high, low, volume):
   return(df)
 
 
+def use_scale(df, ssx, ssy):
+  x = ssx.transform(df.drop('High', axis=1))
+  y = ssy.transform(df['High'])
+  return(x,y)
+
+
 def feature_engineer(df):
   df['High_Low_Diff'] = df['High']-df['Low']
   df['Open_Close_Diff'] = df['Open']-df['Close']
@@ -73,9 +79,7 @@ def model_create(trainx,trainy):
   model.fit(trainx, trainy,  batch_size=20, epochs=250)
   return(model)
 
-def model_predict(model, testx, testy, ssy):
-  pred = model.predict(testx)
+def model_predict(model, x, ssy):
+  pred = model.predict(x)
   pred = ssy.inverse_transform(pred)
-  testy = ssy.inverse_transform(testy)
-  print(np.sqrt(mean_squared_error(testy, pred)))
   return(pred)
