@@ -20,16 +20,16 @@
     </header>
     <p>Please enter the <b>most recent</b> <em>$ATVI</em> stock price</p>
     <form action="/implementation/app.py" method="GET">
-      <label for="open">Open:</label>
-      <input type="number" id="open" name="open" min="0" max="300" value="299.999" step = 0.001>
-      <label for="close">Close:</label>
-      <input type="number" id="close" name="close" min="0" max="300" value="299.999" step = 0.001>
-      <label for="volume">Volume:</label>
-      <input type="number" id="volume" name="volume" min="0" max="300" value="299.999" step = 0.001>
-      <label for="low">Low:</label>
-      <input type="number" id="low" name="low" min="0" max="300" value="299.999" step = 0.001>
-      <label for="high">High:</label>
-      <input type="number" id="high" name="high" min="0" max="300" value="299.999" step = 0.001>
+      <label for="open">Open ($):</label>
+      <input type="number" id="open" name="open" min="0" max="300" value="12.34" step = 0.01>
+      <label for="close">Close ($):</label>
+      <input type="number" id="close" name="close" min="0" max="300" value="12.34" step = 0.01>
+      <label for="volume">Volume (million):</label>
+      <input type="number" id="volume" name="volume" min="0" max="100" value="12.34" step = 0.01>
+      <label for="low">Low ($):</label>
+      <input type="number" id="low" name="low" min="0" max="300" value="12.34" step = 0.01>
+      <label for="high">High ($):</label>
+      <input type="number" id="high" name="high" min="0" max="300" value="12.34" step = 0.01>
       <input type="submit" value="Submit">
     </form>
   </body>
