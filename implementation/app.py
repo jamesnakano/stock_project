@@ -34,7 +34,7 @@ def predict_page():
     # Generate, transform, and format predictions
 
     # Render prediction
-    return render_template("predict.html",
+    return render_template("result.html",
         date1=, price1=,date2=,price2=,date3=,price3=
 
 # About Page
